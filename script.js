@@ -6,7 +6,7 @@ const messages = [
   "Your smile shines my world.",
   "You're doing great, everything will be fine",
   "You'll always have a place in my life, even if life make us part ways",
-  "You're a superstar!",
+  "You're my little potato :3",
   "Believe in yourself, because I do <3",
   "You made a huge difference in my life, I'll always be gratefull for answering that call",
   "You're capable of great things",
