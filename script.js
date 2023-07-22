@@ -1,4 +1,4 @@
-// Array of 50 cheerful messages
+// Array of messages
 const messages = [
   "You are amazing!",
   "Today is going to be a great day!",
