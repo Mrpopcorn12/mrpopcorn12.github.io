@@ -20,6 +20,7 @@ const messages = [
   // Add more messages here
 ];
 
+let displayedMessages = [];
 const messageText = document.getElementById("message-text");
 const generateBtn = document.getElementById("btn-generate");
 
@@ -31,8 +32,8 @@ async function displayMessageWithTyping(message) {
   let textWithCursor = "";
   for (let i = 0; i <= message.length; i++) {
     textWithCursor = message.substring(0, i) + "<span class='cursor'>|</span>";
-    messageText.innerHTML = textWithCursor; // Use innerHTML to include the span element
-    await sleep(100); // Adjust the value (in milliseconds) to control the typing speed
+    messageText.innerHTML = textWithCursor;
+    await sleep(50); // Adjust the value (in milliseconds) to control the typing speed
 
     if (i === message.length) {
       // Keep the cursor "|" visible after typing is complete
@@ -45,9 +46,25 @@ async function displayMessageWithTyping(message) {
   }
 }
 
-async function displayRandomMessage() {
+function getRandomUniqueMessage() {
+  if (messages.length === 0) {
+    // If all messages have been displayed, reset the array
+    messages = [...displayedMessages];
+    displayedMessages = [];
+  }
+
   const randomIndex = Math.floor(Math.random() * messages.length);
   const randomMessage = messages[randomIndex];
+
+  // Remove the displayed message from the original array and add it to displayedMessages
+  messages.splice(randomIndex, 1);
+  displayedMessages.push(randomMessage);
+
+  return randomMessage;
+}
+
+async function displayRandomMessage() {
+  const randomMessage = getRandomUniqueMessage();
   await displayMessageWithTyping(randomMessage);
 }
 
