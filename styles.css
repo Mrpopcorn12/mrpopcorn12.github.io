@@ -49,3 +49,6 @@ h1 {
 #btn-generate:hover {
   background-color: #7d3a95; /* Darker purple */
 }
+#message-text .cursor {
+  color: #8e44ad; /* Change the color of the cursor as desired */
+}
