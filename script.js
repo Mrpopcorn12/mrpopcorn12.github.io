@@ -25,7 +25,7 @@ const messageText = document.getElementById("message-text");
 const generateBtn = document.getElementById("btn-generate");
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function displayMessageWithTyping(message) {
@@ -68,6 +68,17 @@ async function displayRandomMessage() {
   await displayMessageWithTyping(randomMessage);
 }
 
+async function copyMessageToClipboard() {
+  // ...
+}
+
 generateBtn.addEventListener("click", displayRandomMessage);
+
+// Social media buttons
+const facebookBtn = document.getElementById("facebook-btn");
+const twitterBtn = document.getElementById("twitter-btn");
+const instagramBtn = document.getElementById("instagram-btn");
+
+
 
 displayRandomMessage();
