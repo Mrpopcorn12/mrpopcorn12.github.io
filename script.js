@@ -17,6 +17,11 @@ const messages = [
   "Cheer up :) nothing deserves your sadness",
   "I promised that I'd never say this to another human being again ... but I love you the moon and back ",
   "I hope you have a great day! and remember I'm always one phone call away",
+  "You will always have a place in my heart.",
+  "Don't let anyone and I mean ANYONE determine your worth, only you know how much you can do.",
+  "I love you so much ya fayrouz you really have no idea of how big my feelings are for you.",
+  "I wish I was here beside you to help you get through it, but I know that you can and will do it.",
+  "I'm always here for you little potato",
   // Add more messages here
 ];
 
